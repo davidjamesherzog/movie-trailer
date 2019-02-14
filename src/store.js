@@ -1,5 +1,5 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 import movies from './data/movies';
 
 Vue.use(Vuex);
@@ -17,7 +17,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    getMovies({commit}) {
+    getMovies({ commit }) {
       commit('updateMovies', movies);
     }
   },
