@@ -16,11 +16,17 @@
   </div>
 </template>
 <script>
-  export default {
-    computed: {
-      trailerUrlPath() {
-         return this.$store.state.movies[this.$route.params.id].trailerPath;
-      }
+export default {
+  computed: {
+    trailerUrlPath() {
+      return this.$store.state.movies[this.$route.params.id].trailerPath;
     }
-  };
+  }
+};
 </script>
+<style scoped lang="scss">
+.trailer-body {
+  padding: 0;
+  height: 376px;
+}
+</style>
