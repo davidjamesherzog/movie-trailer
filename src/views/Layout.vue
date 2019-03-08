@@ -10,13 +10,7 @@
       <div class="hero-foot">
         <div class="columns">
           <div v-for="movieChoice in movieChoices" :key="movieChoice.id" class="column">
-            <router-link :to="`/${movieChoice.id}`"
-                          tag="li"
-                          class="movie-choice">
-              <i :class="[{ 'fa fa-check-circle favorite-check':  movieChoice.favorite }]"></i>
-              <img :src="`${movieChoice.smallImgSrc}`" class="desktop"/>
-              <p class="mobile">{{ movieChoice.subtitle }}</p>
-            </router-link>
+            <movie-thumbnail :movie="movieChoice"></movie-thumbnail>
           </div>
         </div>
       </div>
@@ -25,10 +19,13 @@
 </template>
 <script>
 import { mapActions } from 'vuex';
+import MovieThumbnail from '../components/movie-thumbnail.vue';
 
 export default {
+  components: {
+    MovieThumbnail
+  },
   created() {
-    console.log('getting movies in layout');
     this.getMovies();
   },
   computed: {
@@ -112,7 +109,6 @@ body {
           img {
             opacity: 0.9;
           }
-          
         }
       }
     }
