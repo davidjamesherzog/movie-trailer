@@ -1,5 +1,8 @@
 # movie-trailer
 
+This project is based on the movie app with Vue.js blog on Hackernoon.  The post can be found [here](https://hackernoon.com/building-a-movie-app-interface-with-vue-js-cdc8aeb5db0b).
+
+
 ## Project setup
 ```
 npm install
